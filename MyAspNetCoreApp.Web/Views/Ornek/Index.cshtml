@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ornek Controller index sayfası</h1>
+<div>@DateTime.UtcNow.ToShortDateString()</div>
+
+@* @{
+       var name = ViewBag.name;
+       <h1>@name</h1>
+   }
+
+   <h1>@ViewBag.name</h1>
+
+   <h3>@name</h3>
+   <hr />
+
+   <p>Yaş: @ViewData["age"]</p>
+
+
+   @{
+       var names = ViewData["names"] as List<string>;
+
+       foreach (var item in names)
+       {
+           <p>@item</p>
+       }
+
+   } *@
+
+   @model List<Productt>;
+@*controller kısmında view içerisinde direk veriyi koyduğumuzda burada tipini belirtmek zorundayız. Küçük model ile tipini belirttik
+    Model ile de datayı alacağız.
+*@
+
+@foreach (var product in Model)
+{
+    <p>@product.Id - @product.Name</p>
+}
+
+
+
+
+
+
