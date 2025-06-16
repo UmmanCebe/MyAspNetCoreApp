@@ -16,7 +16,6 @@ namespace MyAspNetCoreApp.Web.Controllers
             var products = _productRepository.GetAll();
             return View(products);
         }
-
         public IActionResult Add()
         {
             return View();
